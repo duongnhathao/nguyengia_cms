@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-$DATABASE_URL=parse_url('postgres://kpbuvtabjispxs:586e9460a124d96d25e0466aee825bc89cbf442781fe5a8b3447844d6f820587@ec2-3-218-171-44.compute-1.amazonaws.com:5432/dagl2121feq7vu');
+//$DATABASE_URL=parse_url('postgres://kpbuvtabjispxs:586e9460a124d96d25e0466aee825bc89cbf442781fe5a8b3447844d6f820587@ec2-3-218-171-44.compute-1.amazonaws.com:5432/dagl2121feq7vu');
 
 return [
 
@@ -63,19 +63,19 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => $DATABASE_URL["host"],
-            'port' =>  $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'require',
-        ],
+//        'pgsql' => [
+//            'driver' => 'pgsql',
+//            'url' => env('DATABASE_URL'),
+//            'host' => $DATABASE_URL["host"],
+//            'port' =>  $DATABASE_URL["port"],
+//            'database' => ltrim($DATABASE_URL["path"], "/"),
+//            'username' => $DATABASE_URL["user"],
+//            'password' => $DATABASE_URL["pass"],
+//            'charset' => 'utf8',
+//            'prefix' => '',
+//            'schema' => 'public',
+//            'sslmode' => 'require',
+//        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

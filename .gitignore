@@ -42,5 +42,5 @@ resources/docs
 /storage/fonts
 
 /log
-
+/config/database.php
 storage/framework/laravel-excel/

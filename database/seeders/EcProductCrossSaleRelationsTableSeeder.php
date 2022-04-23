@@ -729,6 +729,5 @@ class EcProductCrossSaleRelationsTableSeeder extends Seeder
             ),
         ));
         
-        
     }
 }

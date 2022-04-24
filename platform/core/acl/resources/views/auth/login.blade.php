@@ -6,12 +6,12 @@
     {!! Form::open(['route' => 'access.login', 'class' => 'login-form']) !!}
         <div class="form-group mb-3" id="emailGroup">
             <label>{{ trans('core/acl::auth.login.username') }}</label>
-            {!! Form::text('username', request()->input('email', old('username', app()->environment('demo') ? config('core.base.general.demo.account.username', 'botble') : null)), ['class' => 'form-control', 'placeholder' => trans('core/acl::auth.login.username')]) !!}
+            {!! Form::text('username', request()->input('email'), ['class' => 'form-control', 'placeholder' => trans('core/acl::auth.login.username')]) !!}
         </div>
 
         <div class="form-group mb-3" id="passwordGroup">
             <label>{{ trans('core/acl::auth.login.password') }}</label>
-            {!! Form::input('password', 'password', request()->input('email') ? null : (app()->environment('demo') ? config('core.base.general.demo.account.password', '159357') : null), ['class' => 'form-control', 'placeholder' => trans('core/acl::auth.login.password')]) !!}
+            {!! Form::input('password', 'password', request()->input('email'), ['class' => 'form-control', 'placeholder' => trans('core/acl::auth.login.password')]) !!}
         </div>
 
         <div>

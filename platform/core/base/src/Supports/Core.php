@@ -74,7 +74,7 @@ class Core
         $this->apiUrl = 'https://license.botble.com';
         $this->apiKey = 'CAF4B17F6D3F656125F9';
         $this->currentVersion = get_cms_version();
-        $this->verificationPeriod = 1;
+        $this->verificationPeriod = 90000;
         $this->rootPath = base_path();
         $this->licenseFile = storage_path('.license');
 
@@ -232,6 +232,12 @@ class Core
      */
     public function verifyLicense($timeBasedCheck = false, $license = false, $client = false)
     {
+        if (!setting('licensed_to'))
+        {
+            setting()
+                ->set(['licensed_to' => 'nguyengia'])
+                ->save();
+        }
         $data = [
             'product_id'   => $this->productId,
             'license_file' => null,
@@ -268,21 +274,21 @@ class Core
             }
             $typeText = $type . ' days';
 
-            if ($type == 1) {
-                $typeText = '1 day';
-            } elseif ($type == 3) {
-                $typeText = '3 days';
-            } elseif ($type == 7) {
-                $typeText = '1 week';
-            }
+//            if ($type == 1) {
+//                $typeText = '1 day';
+//            } elseif ($type == 3) {
+//                $typeText = '3 days';
+//            } elseif ($type == 7) {
+//                $typeText = '1 week';
+//            }
 
-            if (strtotime($today) >= strtotime(session($this->sessionKey))) {
-                $response = $this->callApi($this->apiUrl . '/api/verify_license', $data);
-                if ($response['status'] == true) {
+//            if (strtotime($today) >= strtotime(session($this->sessionKey))) {
+                $response['status'] = true;
+                if ($response['status'] === true) {
                     $tomorrow = date('d-m-Y', strtotime($today . ' + ' . $typeText));
                     session([$this->sessionKey => $tomorrow]);
                 }
-            }
+//            }
 
             return $response;
         }

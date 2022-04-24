@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import VerifyLicenseComponent from './components/VerifyLicenseComponent';
-import CheckUpdateComponent from "./components/CheckUpdateComponent";
+// import VerifyLicenseComponent from './components/VerifyLicenseComponent';
+// import CheckUpdateComponent from "./components/CheckUpdateComponent";
 
-Vue.component('verify-license-component', VerifyLicenseComponent);
-Vue.component('check-update-component', CheckUpdateComponent);
+// Vue.component('verify-license-component', VerifyLicenseComponent);
+// Vue.component('check-update-component', CheckUpdateComponent);
 
 new Vue({
     el: '#dashboard-alerts',

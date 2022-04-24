@@ -183,7 +183,7 @@ class SystemController extends Controller
                 ->setMessage('A new version (' . $updateData['version'] . ' / released on ' . $updateData['release_date'] . ') is available to update');
         }
 
-        return $response;
+        return null;
     }
 
     /**

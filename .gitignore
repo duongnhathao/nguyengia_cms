@@ -44,3 +44,5 @@ resources/docs
 /log
 /config/database.php
 storage/framework/laravel-excel/
+bootstrap/cache/
+storage/

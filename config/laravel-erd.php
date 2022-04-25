@@ -6,7 +6,8 @@ return [
         //Example
         //\App\Http\Middleware\NotFoundWhenProduction::class,
     ],
-    'models_path'      => base_path('app/Models'),
+//    'models_path'      => base_path('app/Models'),
+    'models_path'      => base_path('app/BC_model_erd'),
     'docs_path'        => base_path('docs/erd/'),
 
     "display" => [

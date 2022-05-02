@@ -13,6 +13,7 @@
         "ext-gd": "*",
         "ext-json": "*",
         "ext-zip": "*",
+        "aws/aws-sdk-php-laravel": "^3.7",
         "botble/menu": "*@dev",
         "botble/page": "*@dev",
         "botble/platform": "*@dev",
@@ -25,13 +26,13 @@
         "botble/theme": "*@dev",
         "botble/widget": "*@dev",
         "doctrine/dbal": "^3.1",
+        "fakerphp/faker": "^1.16",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "^8.62",
         "league/flysystem-aws-s3-v3": "^1.0",
         "orangehill/iseed": "^3.0",
-        "fakerphp/faker": "^1.16",
         "wikimedia/composer-merge-plugin": "^2.0"
     },
     "require-dev": {
